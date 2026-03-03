@@ -179,22 +179,19 @@ document.addEventListener("DOMContentLoaded", function () {
             let count = parseInt(likeNumber.textContent);
 
             if (this.classList.contains('active')) {
-                // дизлайк
                 likeNumber.textContent = count - 1;
                 likeIcon.style.color = '#A1A5AD';
                 likeIcon.classList.remove('animate-like');
-                likeIcon.classList.remove('animate-dislike'); // сброс
-                void likeIcon.offsetWidth; // перезапуск анимации
+                likeIcon.classList.remove('animate-dislike'); 
+                void likeIcon.offsetWidth; 
                 likeIcon.classList.add('animate-dislike');
             } else {
-                // лайк
                 likeNumber.textContent = count + 1;
                 likeIcon.style.color = '#ff655d';
 
-                // триггерим анимацию
                 likeIcon.classList.remove('animate-dislike');
-                likeIcon.classList.remove('animate-like'); // сброс
-                void likeIcon.offsetWidth; // перезапуск анимации
+                likeIcon.classList.remove('animate-like'); 
+                void likeIcon.offsetWidth; 
                 likeIcon.classList.add('animate-like');
             }
 
